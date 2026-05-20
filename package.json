@@ -1,0 +1,25 @@
+{
+  "name": "clone-tabnews-v2",
+  "version": "1.0.0",
+  "description": "Implementação do tabnews.com.br para curso.dev - versão 2",
+  "homepage": "https://github.com/diegovitall/clone-tabnews-v2#readme",
+  "bugs": {
+    "url": "https://github.com/diegovitall/clone-tabnews-v2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegovitall/clone-tabnews-v2.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
