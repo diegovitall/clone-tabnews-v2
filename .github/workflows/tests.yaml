@@ -6,6 +6,7 @@ jobs:
   jest:
     name: Jest Ubuntu
     runs-on: ubuntu-latest
+
     steps: 
       - uses: actions/checkout
 
@@ -15,4 +16,4 @@ jobs:
 
       - run: npm ci
 
-      - run: npm test
+      - run: npm run test
