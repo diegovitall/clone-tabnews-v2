@@ -1,5 +1,5 @@
 import js from "@eslint/js";
-import globals from "globals";
+//import globals from "globals";
 import pluginJest from "eslint-plugin-jest";
 import nextConfig from "eslint-config-next";
 import prettierConfig from "eslint-config-prettier";
@@ -35,9 +35,9 @@ const config = [
     rules: pluginJest.configs.recommended.rules,
 
     // Adiciona variáveis globais de ambiente (como 'describe', 'it', 'expect')
-    languageOptions: {
-      globals: globals.jest,
-    },
+    //languageOptions: {
+    //globals: globals.jest,
+    //},
 
     // Alternativamente, se o plugin tiver suporte total a Flat Config, poderíamos usar:
     // ...pluginJest.configs.recommended
@@ -45,17 +45,17 @@ const config = [
 
   // ** CONFIGURAÇÃO DE AMBIENTE **
 
-  {
-    // Opções de ambiente/linguagem para o restante dos arquivos
-    languageOptions: {
-      // Adiciona variáveis globais de Node e Browser
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-      sourceType: "module",
-    },
-  },
+  //{
+  // Opções de ambiente/linguagem para o restante dos arquivos
+  //languageOptions: {
+  // Adiciona variáveis globais de Node e Browser
+  //globals: {
+  //...globals.browser,
+  //...globals.node,
+  //},
+  //sourceType: "module",
+  //},
+  //},
 
   // ** CONFIGURAÇÃO DE FORMATAÇÃO **
 
