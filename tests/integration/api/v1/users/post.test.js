@@ -45,7 +45,13 @@ describe("POST /api/v1/users", () => {
         userInDatabase.password,
       );
 
+      const incorrectPasswordMatch = await password.compare(
+        "SenhaErrada",
+        userInDatabase.password,
+      );
+
       expect(correctPasswordMatch).toBe(true);
+      expect(incorrectPasswordMatch).toBe(false);
     });
 
     test("With duplicated username", async () => {
@@ -78,7 +84,7 @@ describe("POST /api/v1/users", () => {
       const response2Body = await response2.json();
       expect(response2Body).toEqual({
         name: "ValidationError",
-        message: "O usuário informado já cadastrado.",
+        message: "Usuário informado já cadastrado.",
         action: "Crie um novo usuário ou faça login.",
         status_code: 400,
       });
@@ -115,7 +121,7 @@ describe("POST /api/v1/users", () => {
       expect(response2Body).toEqual({
         name: "ValidationError",
         message: "O email informado já está sendo utilizado.",
-        action: "Utilize outro email para realizar o cadastro.",
+        action: "Utilize outro email para realizar esta operação.",
         status_code: 400,
       });
     });
