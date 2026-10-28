@@ -93,7 +93,7 @@ describe("GET /api/v1/user", () => {
       });
 
       // Set-Cookie assertions
-      /*const parsedSetCookie = setCookieParser(response, {
+      const parsedSetCookie = setCookieParser(response, {
         map: true,
       });
 
@@ -103,7 +103,7 @@ describe("GET /api/v1/user", () => {
         maxAge: -1,
         path: "/",
         httpOnly: true,
-      });*/
+      });
     });
 
     test("With halfway-expired session", async () => {
@@ -155,7 +155,7 @@ describe("GET /api/v1/user", () => {
       ).toEqual(true);
 
       // Set‑Cookie assertions
-      /*const parsedSetCookie = setCookieParser(response, {
+      const parsedSetCookie = setCookieParser(response, {
         map: true,
       });
 
@@ -165,7 +165,7 @@ describe("GET /api/v1/user", () => {
         maxAge: session.EXPIRATION_IN_MILLISECONDS / 1000,
         path: "/",
         httpOnly: true,
-      });*/
+      });
     });
 
     test("With expired session", async () => {
@@ -199,7 +199,7 @@ describe("GET /api/v1/user", () => {
       });
 
       // Set-Cookie assertions
-      /*const parsedSetCookie = setCookieParser(response, {
+      const parsedSetCookie = setCookieParser(response, {
         map: true,
       });
 
@@ -209,7 +209,7 @@ describe("GET /api/v1/user", () => {
         maxAge: -1,
         path: "/",
         httpOnly: true,
-      });*/
+      });
     });
   });
 });
